@@ -1,65 +1,31 @@
-# ac-gtk README
+# AC-GTK-Python Extension
+### Advanced Autocomplete & Snippets for GTK Development in VS Code
 
-This is the README for your extension "ac-gtk". After writing up a brief description, we recommend including the following sections.
+<img width="256" height="256" alt="logo-acgtk" src="https://github.com/user-attachments/assets/eb148824-b4fa-4435-a03a-f9bc677f2660" />
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+A vscode Extension that simplifies writing code in the GTK library for Linux application development.
 
-For example if there is an image subfolder under your extension project workspace:
+## Features:
 
-\!\[feature X\]\(images/feature-x.png\)
+- AutoComplete.
+- Snippets like html '!G' its make a main GTK code.
+- Suggestions the right.
+- Auto Suggest Functions connected.
+- docs (i dont add it but you can source code is here..)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+for exmple:
 
-## Requirements
+The '!G' Feature:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+https://github.com/user-attachments/assets/6642e78e-5616-4222-b60c-ca6fb5d3e941
 
-## Extension Settings
+The AutoComplete & Auto Detective Functions connected:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+https://github.com/user-attachments/assets/b4bfec6e-eb5d-4a90-89fe-8010a6c2c5d1
 
 ---
 
-## Working with Markdown
+ ## if you need help pull request now and add anything you want.
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+> Made By: CatMilkTea For Linux Community.
