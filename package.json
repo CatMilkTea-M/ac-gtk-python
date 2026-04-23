@@ -1,0 +1,54 @@
+{
+  "name": "ac-gtk",
+  "displayName": "AC-GTK: Python GTK Autocomplete",
+  "description": "Professional Autocomplete & Snippets for Python GTK (PyGObject) development. Includes built-in documentation and \"!G\" shortcut for rapid boilerplate generation.",
+  "version": "0.0.1",
+  "publisher": "CatMilkTea",
+  "license":"GPL-3.0-or-later",
+  "icon": "icons/logo-acgtk.png",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "GTK",
+    "GTK3",
+    "Python",
+    "Linux",
+    "Autocomplete",
+    "ac",
+    "ac-gtk",
+    "Snippets",
+    "documentation",
+    "PyGObject",
+    "GUI"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets.json"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.16.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
