@@ -10,7 +10,7 @@ A vscode Extension that simplifies writing code in the GTK library for Linux app
 
 - AutoComplete.
 - Snippets like html '!G' its make a main GTK code.
-- Suggestions the right.
+- Accurate Code Completion.
 - Auto Suggest Functions connected.
 - docs (i dont add it but you can source code is here..)
 
