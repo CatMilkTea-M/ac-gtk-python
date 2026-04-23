@@ -3,8 +3,9 @@
   "displayName": "AC-GTK: Python GTK Autocomplete",
   "description": "Professional Autocomplete & Snippets for Python GTK (PyGObject) development. Includes built-in documentation and \"!G\" shortcut for rapid boilerplate generation.",
   "version": "0.0.1",
-  "publisher": "CatMilkTea",
+  "publisher": "CatMilkTea-M",
   "license":"GPL-3.0-or-later",
+  "repository": "https://github.com/CatMilkTea-M/ac-gtk-python",
   "icon": "icons/logo-acgtk.png",
   "engines": {
     "vscode": "^1.90.0"
