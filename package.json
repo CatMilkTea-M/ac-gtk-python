@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "publisher": "fluct1",
   "license":"GPL-3.0-or-later",
-  "repository": "https://github.com/CatMilkTea-M/ac-gtk-python",
+  "repository": "https://github.com/fluct1/ac-gtk-python",
   "icon": "icons/logo-acgtk.png",
   "engines": {
     "vscode": "^1.90.0"
