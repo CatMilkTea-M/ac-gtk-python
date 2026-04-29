@@ -14,7 +14,7 @@ A vscode Extension that simplifies writing code in the GTK library for Linux app
 - Auto Suggest Functions connected.
 - docs (i dont add it but you can source code is here..)
 
-for exmple:
+for example:
 
 The `!G` Feature:
 
@@ -24,11 +24,11 @@ The AutoComplete & Auto Detective Functions connected:
 
 https://github.com/user-attachments/assets/b4bfec6e-eb5d-4a90-89fe-8010a6c2c5d1
 
-> **Note**: You need `PyGObject` installed to Run ac-gtk Extension and `Python Extensions` to python autocomplate and python runner button.
+> **Note**: You need `PyGObject` installed to Run ac-gtk Extension and `Python Extensions` to python autocomplete and python runner button.
 
 ---
 
- ## If you need help, you can make a pull request and add what you want or fix what you want.
+ ## Contributions are welcome! If you'd like to help improve this extension, feel free to open a pull request.
 
 > > Note: You can access the extension.js file and search (using ctrl + f or g) for the word "DOC?" and there you can add the definition you want in the pull request.
 
