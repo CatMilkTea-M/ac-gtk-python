@@ -1,5 +1,5 @@
 {
-  "name": "ac-gtk",
+  "name": "ac-gtk-python",
   "displayName": "AC-GTK: Python GTK Autocomplete",
   "description": "Professional Autocomplete & Snippets for Python GTK (PyGObject) development. Includes built-in documentation and \"!G\" shortcut for rapid boilerplate generation.",
   "version": "0.0.1",
