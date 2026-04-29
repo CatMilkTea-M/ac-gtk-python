@@ -262,64 +262,19 @@ function activate(context) {
                     }
                 ].map(s => createItem(s, vscode.CompletionItemKind.Property))
             }
-            
-            const VarMatch = linePrefix.match(/(\w+)\.$/);
-            if (VarMatch) {
-                const varName = VarMatch[1]
-            
-                if (getVarable(document, varName, 'Window')) {
-                    return [
-                        {
-                            label: 'connect',
-                            detail: 'Gtk.Window.connect() or your class or varable.',
-                            docs: 'DOC?',
-                            insert: 'connect($1)'
-                        },
-                        {
-                            label: 'show_all',
-                            detail: 'Gtk.Window.show_all() or your class or varable.',
-                            docs: 'DOC?',
-                            insert: 'show_all($1)'
-                        },
-                        {
-                            label: 'add',
-                            detail: 'Gtk.Window().add()',
-                            docs: 'DOC?',
-                            insert: 'add($1)'
-                        }
-                    ].map(s => createItem(s, vscode.CompletionItemKind.Method))
-                }
-                if (getVarable(document, varName, 'Button')) {
-                    return [
-                        {
-                            label: 'connect',
-                            detail: 'Gtk.Button.connect() or your class or varable.',
-                            docs: 'DOC?',
-                            insert: 'connect($1)'
-                        }
-                    ].map(s => createItem(s, vscode.CompletionItemKind.Method))
-                }
-                if (getVarable(document, varName, 'Box')) {
-                    return [
-                        {
-                            label: 'pack_start',
-                            detail: 'pack_start(widget:String, expand:Bool, fill:Bool, padding:int)',
-                            docs: 'DOC?',
-                            insert: 'pack_start($1)'
-                        }
-                    ].map(s => createItem(s, vscode.CompletionItemKind.Method))
-                }
-            }
 
             const VarMatchs = linePrefix.match(/(\w+)\.(\w*)$/)
 
             if (VarMatchs) {
                 const varName = VarMatchs[1];
+                let results = []; // Array for all
+
                 const gtkTypes = ['Window', 'Button', 'Box', 'Label', 'Entry'];
                 const isGtk = gtkTypes.some(type => getVarable(document, varName, type));
 
+                // Gtk
                 if (isGtk) {
-                    return [
+                    results.push(...[
                         {
                             label: 'props',
                             detail: 'props.propertie_name',
@@ -338,7 +293,78 @@ function activate(context) {
                             docs: 'DOC?',
                             insert: 'get_property($1)'
                         }
-                    ].map(s => createItem(s, vscode.CompletionItemKind.Method));
+                    ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
+                }
+
+                // Label
+                if (getVarable(document, varName, 'Label')) {
+                    results.push(...[
+                        {
+                            label: 'set_text',
+                            detail: 'set_text({varable_text_name})',
+                            docs: 'DOC?',
+                            insert: 'set_text($1)'
+                        },
+                        {
+                            label: 'get_text',
+                            detail: 'get_text()',
+                            docs: 'DOC?',
+                            insert: 'get_text()'
+                        }
+                    ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
+                }
+
+                // Window
+                if (getVarable(document, varName, 'Window')) {
+                    results.push(...[
+                        {
+                            label: 'connect',
+                            detail: 'Gtk.Window.connect() or your class or varable.',
+                            docs: 'DOC?',
+                            insert: 'connect($1)'
+                        },
+                        {
+                            label: 'show_all',
+                            detail: 'Gtk.Window.show_all() or your class or varable.',
+                            docs: 'DOC?',
+                            insert: 'show_all($1)'
+                        },
+                        {
+                            label: 'add',
+                            detail: 'Gtk.Window().add()',
+                            docs: 'DOC?',
+                            insert: 'add($1)'
+                        }
+                    ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
+                }
+
+                // Button
+                if (getVarable(document, varName, 'Button')) {
+                    results.push(...[
+                        {
+                            label: 'connect',
+                            detail: 'Gtk.Button.connect() or your class or varable.',
+                            docs: 'DOC?',
+                            insert: 'connect($1)'
+                        }
+                    ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
+                }
+
+                // Box
+                if (getVarable(document, varName, 'Box')) {
+                    results.push(...[
+                        {
+                            label: 'pack_start',
+                            detail: 'pack_start(widget:String, expand:Bool, fill:Bool, padding:int)',
+                            docs: 'DOC?',
+                            insert: 'pack_start($1)'
+                        }
+                    ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
+                }
+
+                // All Suggests
+                if (results.length > 0) {
+                    return results;
                 }
             }
 
