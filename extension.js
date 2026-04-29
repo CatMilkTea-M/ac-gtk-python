@@ -96,6 +96,18 @@ function activate(context) {
                         detail: 'AC-GTK',
                         docs: 'DOC?',
                         insert: 'Align'
+                    },
+                    {
+                        label: 'Entry',
+                        detail: 'AC-GTK',
+                        docs: 'DOC?',
+                        insert: 'Entry($1)'
+                    },
+                    {
+                        label: 'AboutDialog',
+                        detail: 'AC-GTK',
+                        docs: 'DOC?',
+                        insert: 'AboutDialog()'
                     }
                 ].map(s => createItem(s, vscode.CompletionItemKind.Class));
             }
@@ -238,7 +250,18 @@ function activate(context) {
                         docs: 'DOC?',
                         insert: 'widget'
                     }
-                ].map(s => createItem(s, vscode.CompletionItemKind.Variable))
+                ].map(s => createItem(s, vscode.CompletionItemKind.Variable));
+            }
+
+            if (linePrefix.match(/def\s+\w+\(\s*$/)) {
+                return [
+                    {
+                        label: 'button',
+                        detail: 'AC-GTK',
+                        docs: 'DOC?',
+                        insert: 'button'
+                    }
+                ].map(s => createItem(s, vscode.CompletionItemKind.Variable));
             }
             
             if (linePrefix.match(/super\(\)\.\w*$/)) {
@@ -358,6 +381,72 @@ function activate(context) {
                             detail: 'pack_start(widget:String, expand:Bool, fill:Bool, padding:int)',
                             docs: 'DOC?',
                             insert: 'pack_start($1)'
+                        }
+                    ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
+                }
+
+                // Entry
+                if (getVarable(document, varName, 'Entry')) {
+                    results.push(...[
+                        {
+                            label: 'in next update [0.0.4]',
+                            detail: 'in next update [0.0.4] i have exam..',
+                            docs: 'in next update [0.0.4] i have exam..',
+                            insert: 'in next update [0.0.4] i have exam..'
+                        }
+                    ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
+                }
+
+                // AboutDialog
+                if (getVarable(document, varName, 'AboutDialog')) {
+                    results.push(...[
+                        {
+                            label: 'set_program_name',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'set_program_name("$1")'
+                        },
+                        {
+                            label: 'set_version',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'set_version("$1")'
+                        },
+                        {
+                            label: 'set_authors',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'set_authors(["$1"])'
+                        },
+                        {
+                            label: 'set_copyright',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'set_copyright("$1")'
+                        },
+                        {
+                            label: 'set_comments',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'set_comments("$1")'
+                        },
+                        {
+                            label: 'set_website',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'set_website("$1")'
+                        },
+                        {
+                            label: 'run',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'run()'
+                        },
+                        {
+                            label: 'destroy',
+                            detail: 'AC-GTK',
+                            docs: 'DOC?',
+                            insert: 'destroy()'
                         }
                     ].map(s => createItem(s, vscode.CompletionItemKind.Method)));
                 }

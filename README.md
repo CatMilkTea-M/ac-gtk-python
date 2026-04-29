@@ -24,9 +24,11 @@ The AutoComplete & Auto Detective Functions connected:
 
 https://github.com/user-attachments/assets/b4bfec6e-eb5d-4a90-89fe-8010a6c2c5d1
 
+> **Note**: You need `PyGObject` installed to Run ac-gtk Extension and `Python Extensions` to python autocomplate and python runner button.
+
 ---
 
- ## if you want me help pull request now and add anything you want.
+ ## If you need help, you can make a pull request and add what you want or fix what you want.
 
 > > Note: You can access the extension.js file and search (using ctrl + f or g) for the word "DOC?" and there you can add the definition you want in the pull request.
 
