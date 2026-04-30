@@ -72,3 +72,6 @@ if __name__ == "__main__":
     win.show_all()
     Gtk.main()
     
+#def test(button) works
+#def test(self, widget) works
+# def inputs in () is so bad fix it! and autocomplete is bad too because its works in anywhere.

@@ -378,7 +378,7 @@ function activate(context) {
                     results.push(...[
                         {
                             label: 'pack_start',
-                            detail: 'pack_start(widget:String, expand:Bool, fill:Bool, padding:int)',
+                            detail: 'pack_start(widget:Object, expand:Bool, fill:Bool, padding:int)',
                             docs: 'DOC?',
                             insert: 'pack_start($1)'
                         }
