@@ -21,7 +21,7 @@
         ],
         "description": "Creating the complete basic structure of the application."
     },
-    "جتك بايثون نموذج": {
+    "(TEST) جتك بايثون نموذج": {
         "prefix": ["!ج"],
         "body": [
             "import gi",
@@ -41,6 +41,6 @@
             "win.show_all()",
             "Gtk.main()"
         ],
-        "description": "أنشيء الهيكل الأساسي للتطبيق بضغطة زر. (TEST)"
+        "description": "(TEST) أنشيء الهيكل الأساسي للتطبيق بضغطة زر."
     }
 }
